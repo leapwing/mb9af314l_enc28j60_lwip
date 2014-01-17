@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Fujitsu FM3</title>
+		<link rel="stylesheet" type="text/css" href="style.css"> 
+		<meta charset="utf-8">
+    </head>
+<body>
+
+<h1>Welcome to FUJITSU FM3</h1>
+<p>
+This Webserver runs on a FM3 microcontroller by Fujitsu, powered by the LwIP 
+(lightweight IP) TCP/IP stack.
+</p>
+<p>
+Here you see a simple website which has to be reloaded for receiving current data from the microcontroller
+or sending values to it, respectivelly. You can find an <a href="index.html">AJAX-based example which updates data in real-time without
+reloading the hole page here</a>
+</p>
+
+
+<div class="container">
+<div class="label">ADC:</div><!--#ADC--><br>
+<div class="label">KEY:</div><!--#KEY--><br>   
+<div class="label"><form name="input" method="GET" action="/inputsimple.cgi">
+<input type="submit" value="Set LEDs" />
+<input type="number" name="ledval" size="1" min="0" max="7" maxlength="1" value="<!--#LED-->">
+</form>
+</div>Get Method<br>
+<br><div class="label"><form name="input_post" method="POST" action="/inputsimplepost.cgi">
+<input type="submit" value="Set LEDs" />
+<input type="number" name="ledval_post" size="1" min="0" max="7" maxlength="1" value="<!--#LED-->">
+</form>
+</div>Post Method<br>
+</div>
+
+<p> 
+<a href="simple.shtml">Update Data</a><br>
+</p>
+
+<p>
+For more information, updates, code examples and documentation, please visit our website at <a href="http://mcu.emea.fujitsu.com/">http://mcu.emea.fujitsu.com/</a>.
+Below, you see a 100kb large picture of the FSSD-9A314-EVB evaluation board to demonstrate transfer speed.
+<img alt="big picture" src="bigpicture.jpg?1"><!--?1 to circumvent browser cache to enable performance measurements-->
+</p> 
+
+</body>
+</html>  
+          
